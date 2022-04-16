@@ -34,4 +34,18 @@ class VenueController extends Controller
             []
         );
     }
+
+    /**
+     * ぴあアリーナ
+     *
+     * @return \Illuminate\View\View
+     */
+    public function yokohamaArena(): View
+    {
+
+        return view(
+            'venue.yokohamaArena',
+            []
+        );
+    }
 }

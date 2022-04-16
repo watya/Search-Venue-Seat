@@ -25,3 +25,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/', [VenueController::class, 'index'])->name('venue.index');
 Route::get('venue/piaArena', [VenueController::class, 'piaArena'])->name('venue.piaArena');
+Route::get('venue/yokohamaArena', [VenueController::class, 'yokohamaArena'])->name('venue.yokohamaArena');
+
