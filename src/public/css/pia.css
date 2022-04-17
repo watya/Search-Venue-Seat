@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+table {
+    margin: 20px auto;
+}
+
+/* アリーナ */
+.arena th {
+    background: #9a8e8e;
+    color: #fff;
+    padding: 25px;
+    border-bottom: solid 20px;
+    width: 639px;
+    height: 90px;
+    text-align: center;
+}
+#arena-a {
+    border-right: solid 10px #ccc;
+    border-left: solid 10px #ccc;
+    padding: 25px;
+}
+#arena-top {
+    border-top: solid 8px #ccc;
+}
+#arena-bottom {
+    border-bottom: solid 13px #ccc;
+}
+#cd-arena {
+    margin-left: 94px;
+}
+
+/* 2階スタンドL席 */
+.stand-2l tr {
+    display: block;
+}
+#stand-2lTop {
+    border-top: solid 5px #ccc;
+}
+#stand-2lBottom {
+    border-bottom: solid 5px #ccc;
+}
+#stand-2l {
+    border-right: solid 5px #ccc;
+    border-left: solid 5px #ccc;
+    padding: 10px;
+}
