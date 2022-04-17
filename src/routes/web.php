@@ -24,6 +24,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/', [VenueController::class, 'index'])->name('venue.index');
-Route::get('venue/piaArena', [VenueController::class, 'piaArena'])->name('venue.piaArena');
-Route::get('venue/yokohamaArena', [VenueController::class, 'yokohamaArena'])->name('venue.yokohamaArena');
+Route::get('venue/pia', [VenueController::class, 'pia'])->name('venue.pia');
+Route::get('venue/yokohama', [VenueController::class, 'yokohama'])->name('venue.yokohama');
 

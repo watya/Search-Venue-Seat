@@ -26,11 +26,11 @@ class VenueController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function piaArena(): View
+    public function pia(): View
     {
 
         return view(
-            'venue.piaArena',
+            'venue.pia',
             []
         );
     }
@@ -40,11 +40,11 @@ class VenueController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function yokohamaArena(): View
+    public function yokohama(): View
     {
 
         return view(
-            'venue.yokohamaArena',
+            'venue.yokohama',
             []
         );
     }
