@@ -1,8 +1,5 @@
 <template>
     <div>
-        <h1>ぴあアリーナMM</h1>
-        <p>神奈川県横浜市西区みなとみらい3-2-2</p>
-
         <div class="venue">
             <!-- <table class="arena">
                 <div>
@@ -75,31 +72,43 @@
 
             <table class="stand-2l" id="stand-2l">
                 <div>
-                    <span v-for="n in 6" :key="n">
+                    <h>2階席L</h>
+                    <span v-for="n in 5" :key="n">
                         <tr id="stand-2lTop">
-                            <td >L0{{ 2 * n - 1 }}</td>
+                            <td>L0{{ 2 * n - 1 }}</td>
                         </tr>
                         <tr id="stand-2lBottom">
-                            <td >L0{{ 2 * n }}</td>
+                            <td>L0{{ 2 * n }}</td>
                         </tr>
                     </span>
                 </div>
             </table>
-        </div>
-        <div>
-            <a href="https://pia-arena-mm.jp/" target="_blank">>公式サイト</a>
-            <img
-                src="https://pia-arena-mm.jp/wp-content/uploads/2020/07/arena.jpg"
-            />
-        </div>
-        <div>
-            <a
-                class="twitter-timeline"
-                href="https://twitter.com/pia_arena_mm?ref_src=twsrc%5Etfw"
-                width="350px"
-                height="600px"
-                >Tweets by pia_arena_mm</a
-            >
+            <table class="stand-3l" id="stand-3l">
+                <div>
+                    <h>3階席L</h>
+                    <span v-for="n in 5" :key="n">
+                        <tr id="stand-3lTop">
+                            <td>L0{{ 2 * n - 1 }}</td>
+                        </tr>
+                        <tr id="stand-3lBottom">
+                            <td>L0{{ 2 * n }}</td>
+                        </tr>
+                    </span>
+                </div>
+            </table>
+            <table class="stand-4l" id="stand-4l">
+                <div>
+                    <h>4階席L</h>
+                    <span v-for="n in 5" :key="n">
+                        <tr id="stand-4lTop">
+                            <td>L0{{ 2 * n - 1 }}</td>
+                        </tr>
+                        <tr id="stand-4lBottom">
+                            <td>L0{{ 2 * n }}</td>
+                        </tr>
+                    </span>
+                </div>
+            </table>
         </div>
     </div>
 </template>
