@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* モニター */
+.L {
+    display: flex;
+    position: absolute;
+    top: 270px; /* #contents内の上から何pxか */
+    left: 330px; /*#contents内の左から何pxか */
+}
+
+.stand-2l td,
+.stand-3l td,
+.stand-4l td {
+    padding: 7px;
+}
+.stand-2l tr,
+.stand-3l tr,
+.stand-4l tr {
+    display: block;
+}
+
+/* 2階スタンドL席 */
+.stand-2l {
+    border-right: solid 5px rgb(251, 206, 139);
+    border-left: solid 5px rgb(251, 206, 139);
+    padding: 10px;
+}
+.stand-2lTop {
+    border-top: solid 2px rgb(251, 206, 139);
+}
+.stand-2lBottom {
+    border-bottom: solid 2px rgb(251, 206, 139);
+}
+
+/* 3階スタンドL席 */
+.stand-3l {
+    border-right: solid 5px rgb(154, 248, 143);
+    border-left: solid 5px rgb(154, 248, 143);
+    padding: 10px;
+}
+.stand-3lTop {
+    border-top: solid 2px rgb(154, 248, 143);
+}
+.stand-3lBottom {
+    border-bottom: solid 2px rgb(154, 248, 143);
+}
+
+/* 4階スタンドL席 */
+.stand-4l {
+    border-right: solid 5px rgb(81, 175, 199);
+    border-left: solid 5px rgb(81, 175, 199);
+    padding: 10px;
+}
+.stand-4lTop {
+    border-top: solid 2px rgb(81, 175, 199);
+}
+.stand-4lBottom {
+    border-bottom: solid 2px rgb(81, 175, 199);
+}
+
+/* mac画面 */
+@media (min-width: 1000px) {
+    .L {
+        display: flex;
+        position: absolute;
+        top: 270px; /* #contents内の上から何pxか */
+        left: 100px; /*#contents内の左から何pxか */
+    }
+
+    .stand-2l td,
+    .stand-3l td,
+    .stand-4l td {
+        padding: 7px;
+    }
+    .stand-2l tr,
+    .stand-3l tr,
+    .stand-4l tr {
+        display: block;
+    }
+
+    /* 2階スタンドL席 */
+    .stand-2l {
+        border-right: solid 5px rgb(251, 206, 139);
+        border-left: solid 5px rgb(251, 206, 139);
+        padding: 10px;
+    }
+    .stand-2lTop {
+        border-top: solid 2px rgb(251, 206, 139);
+    }
+    .stand-2lBottom {
+        border-bottom: solid 2px rgb(251, 206, 139);
+    }
+
+    /* 3階スタンドL席 */
+    .stand-3l {
+        border-right: solid 5px rgb(154, 248, 143);
+        border-left: solid 5px rgb(154, 248, 143);
+        padding: 10px;
+    }
+    .stand-3lTop {
+        border-top: solid 2px rgb(154, 248, 143);
+    }
+    .stand-3lBottom {
+        border-bottom: solid 2px rgb(154, 248, 143);
+    }
+
+    /* 4階スタンドL席 */
+    .stand-4l {
+        border-right: solid 5px rgb(81, 175, 199);
+        border-left: solid 5px rgb(81, 175, 199);
+        padding: 10px;
+    }
+    .stand-4lTop {
+        border-top: solid 2px rgb(81, 175, 199);
+    }
+    .stand-4lBottom {
+        border-bottom: solid 2px rgb(81, 175, 199);
+    }
+}

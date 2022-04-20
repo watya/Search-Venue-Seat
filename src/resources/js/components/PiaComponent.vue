@@ -38,75 +38,141 @@
                     </div>
                 </div>
             </table> -->
-            <table class="arena">
+
+            <!-- アリーナ -->
+            <table>
                 <div>
                     <div>
-                        <th>ステージ</th>
+                        <th class="stage">ステージ</th>
                         <span v-for="n in 7" :key="n">
-                            <tr id="arena-top">
-                                <td id="arena-a">A{{ n }}</td>
+                            <tr class="arena-top">
+                                <td class="arena">A{{ n }}</td>
                             </tr>
-                            <tr id="arena-bottom">
-                                <td id="arena-a"></td>
+                            <tr class="arena-bottom">
+                                <td class="arena"></td>
                             </tr>
                             <tr>
-                                <td id="arena-a">B{{ n }}</td>
+                                <td class="arena">B{{ n }}</td>
                             </tr>
-                            <tr id="arena-bottom">
-                                <td id="arena-a"></td>
+                            <tr class="arena-bottom">
+                                <td class="arena"></td>
                             </tr>
                         </span>
                     </div>
-                    <div id="cd-arena">
+                    <div class="cd-arena">
                         <span v-for="k in 5" :key="k">
                             <tr>
-                                <td id="arena-a">C{{ 1 + k }}</td>
+                                <td class="arena">C{{ 1 + k }}</td>
                             </tr>
-                            <tr id="arena-bottom">
-                                <td id="arena-a"></td>
+                            <tr class="arena-bottom">
+                                <td class="arena"></td>
                             </tr>
                         </span>
                     </div>
                 </div>
             </table>
 
-            <table class="stand-2l" id="stand-2l">
-                <div>
-                    <h>2階席L</h>
-                    <span v-for="n in 5" :key="n">
-                        <tr id="stand-2lTop">
-                            <td>L0{{ 2 * n - 1 }}</td>
-                        </tr>
-                        <tr id="stand-2lBottom">
-                            <td>L0{{ 2 * n }}</td>
-                        </tr>
-                    </span>
-                </div>
-            </table>
-            <table class="stand-3l" id="stand-3l">
-                <div>
-                    <h>3階席L</h>
-                    <span v-for="n in 5" :key="n">
-                        <tr id="stand-3lTop">
-                            <td>L0{{ 2 * n - 1 }}</td>
-                        </tr>
-                        <tr id="stand-3lBottom">
-                            <td>L0{{ 2 * n }}</td>
-                        </tr>
-                    </span>
-                </div>
-            </table>
-            <table class="stand-4l" id="stand-4l">
-                <div>
+            <!-- L席 -->
+            <table class="L">
+                <div class="stand-4l">
                     <h>4階席L</h>
                     <span v-for="n in 5" :key="n">
-                        <tr id="stand-4lTop">
+                        <tr class="stand-4lTop">
                             <td>L0{{ 2 * n - 1 }}</td>
                         </tr>
-                        <tr id="stand-4lBottom">
+                        <tr class="stand-4lBottom">
                             <td>L0{{ 2 * n }}</td>
                         </tr>
                     </span>
+                </div>
+                <div class="stand-3l">
+                    <h>3階席L</h>
+                    <span v-for="n in 5" :key="n">
+                        <tr class="stand-3lTop">
+                            <td>L0{{ 2 * n - 1 }}</td>
+                        </tr>
+                        <tr class="stand-3lBottom">
+                            <td>L0{{ 2 * n }}</td>
+                        </tr>
+                    </span>
+                </div>
+                <div class="stand-2l">
+                    <h>2階席L</h>
+                    <span v-for="n in 5" :key="n">
+                        <tr class="stand-2lTop">
+                            <td>L0{{ 2 * n - 1 }}</td>
+                        </tr>
+                        <tr class="stand-2lBottom">
+                            <td>L0{{ 2 * n }}</td>
+                        </tr>
+                    </span>
+                </div>
+            </table>
+            <!-- R席 -->
+            <table class="R">
+                <div class="stand-2r">
+                    <h>2階席R</h>
+                    <span v-for="n in 5" :key="n">
+                        <tr class="stand-2rTop">
+                            <td>R{{ 39 - (2 * n - 1) }}</td>
+                        </tr>
+                        <tr class="stand-2rBottom">
+                            <td>R{{ 39 - 2 * n }}</td>
+                        </tr>
+                    </span>
+                </div>
+                <div class="stand-3r">
+                    <div>
+                        <h>3階席R</h>
+                        <span v-for="n in 5" :key="n">
+                            <tr class="stand-3rTop">
+                                <td>R{{ 39 - (2 * n - 1) }}</td>
+                            </tr>
+                            <tr class="stand-3rBottom">
+                                <td>R{{ 39 - 2 * n }}</td>
+                            </tr>
+                        </span>
+                    </div>
+                </div>
+                <div class="stand-4r">
+                    <div>
+                        <h>4階席R</h>
+                        <span v-for="n in 5" :key="n">
+                            <tr class="stand-4rTop">
+                                <td>R{{ 39 - (2 * n - 1) }}</td>
+                            </tr>
+                            <tr class="stand-4rBottom">
+                                <td>R{{ 39 - 2 * n }}</td>
+                            </tr>
+                        </span>
+                    </div>
+                </div>
+            </table>
+            <!--  C席 -->
+            <table class="C">
+                <tr>
+                    2階席C
+                </tr>
+                <div class="stand-2c">
+                    <span v-for="n in 4" :key="n">
+                        <td>C{{ 15 + (2 * n - 1) }} C{{ 15 + 2 * n }}</td>
+                    </span>
+                </div>
+                <tr>
+                    3階席C
+                </tr>
+                <div class="stand-3c">
+                    <span v-for="n in 4" :key="n">
+                        <td>C{{ 15 + (2 * n - 1) }} C{{ 15 + 2 * n }}</td>
+                    </span>
+                </div>
+                <tr>
+                    4階席C
+                </tr>
+                <div class="stand-4c">
+                    <td>C16 C17</td>
+                    <td>C17 C18</td>
+                    <td>C18 C21</td>
                 </div>
             </table>
         </div>
