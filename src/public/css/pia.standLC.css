@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* LC席 */
+
+.stand-2lc td,
+.stand-3lc td,
+.stand-4lc td {
+    padding: 20px;
+}
+
+/* 2階スタンドLC席 */
+.stand-2lc {
+    border-right: solid 5px rgb(251, 206, 139);
+    border-left: solid 5px rgb(251, 206, 139);
+    border-top: solid 5px rgb(251, 206, 139);
+    border-bottom: solid 5px rgb(251, 206, 139);
+    padding: 9px;
+}
+
+/* 3階スタンドLC席 */
+.stand-3lc {
+    border-right: solid 5px rgb(154, 248, 143);
+    border-left: solid 5px rgb(154, 248, 143);
+    border-top: solid 5px rgb(154, 248, 143);
+    border-bottom: solid 5px rgb(154, 248, 143);
+    padding: 4px;
+}
+
+/* 4階スタンドLC席 */
+.stand-4lc {
+    border-right: solid 5px rgb(81, 175, 199);
+    border-left: solid 5px rgb(81, 175, 199);
+    border-top: solid 5px rgb(81, 175, 199);
+    border-bottom: solid 5px rgb(81, 175, 199);
+    padding: 1px;
+}

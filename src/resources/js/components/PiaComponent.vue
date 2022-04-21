@@ -175,6 +175,28 @@
                     <td>C18 C21</td>
                 </div>
             </table>
+
+            <!-- LC席 -->
+            <table class="LC">
+                <h>2階席L</h>
+                <div class="stand-2lc">
+                    <td>L11 L12</td>
+                    <td>L12 ~ L14</td>
+                    <td>L14 L15</td>
+                </div>
+                <h>3階席L</h>
+                <div class="stand-3lc">
+                    <td>L11 L12</td>
+                    <td>L12 ~ L14</td>
+                    <td>L14 L15</td>
+                </div>
+                <h>4階席L</h>
+                <div class="stand-4lc">
+                    <td>L11 L12</td>
+                    <td>L12 ~ L14</td>
+                    <td>L14 L15</td>
+                </div>
+            </table>
         </div>
     </div>
 </template>
