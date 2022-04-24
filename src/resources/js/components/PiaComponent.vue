@@ -18,14 +18,12 @@
                 type="text"
                 class="search_row"
                 v-model="rowNumber"
-                placeholder=""
                 style="width: 60px"
             />列
             <input
                 type="text"
                 class="search_seat"
                 v-model="seatNumber"
-                placeholder=""
                 style="width: 60px"
             />番
             <span class="input-group-btn">
@@ -113,10 +111,31 @@
                     <h>4階席L</h>
                     <span v-for="n in 5" :key="n">
                         <tr class="stand-4lTop">
-                            <td>L0{{ 2 * n - 1 }}</td>
+                            <td
+                                :class="{
+                                    stand4L01: 2 * n - 1 === 1,
+                                    stand4L03: 2 * n - 1 === 3,
+                                    stand4L05: 2 * n - 1 === 5,
+                                    stand4L07: 2 * n - 1 === 7,
+                                    stand4L09: 2 * n - 1 === 9,
+                                }"
+                            >
+                                L0{{ 2 * n - 1 }}
+                            </td>
                         </tr>
                         <tr class="stand-4lBottom">
-                            <td>L0{{ 2 * n }}</td>
+                            <td
+                                v-if="n != 5"
+                                :class="{
+                                    stand4L02: 2 * n === 2,
+                                    stand4L04: 2 * n === 4,
+                                    stand4L06: 2 * n === 6,
+                                    stand4L08: 2 * n === 8,
+                                }"
+                            >
+                                L0{{ 2 * n }}
+                            </td>
+                            <td v-if="n === 5">L{{ 2 * n }}</td>
                         </tr>
                     </span>
                 </div>
@@ -124,10 +143,31 @@
                     <h>3階席L</h>
                     <span v-for="n in 5" :key="n">
                         <tr class="stand-3lTop">
-                            <td>L0{{ 2 * n - 1 }}</td>
+                            <td
+                                :class="{
+                                    stand3L01: 2 * n - 1 === 1,
+                                    stand3L03: 2 * n - 1 === 3,
+                                    stand3L05: 2 * n - 1 === 5,
+                                    stand3L07: 2 * n - 1 === 7,
+                                    stand3L09: 2 * n - 1 === 9,
+                                }"
+                            >
+                                L0{{ 2 * n - 1 }}
+                            </td>
                         </tr>
                         <tr class="stand-3lBottom">
-                            <td>L0{{ 2 * n }}</td>
+                            <td
+                                v-if="n != 5"
+                                :class="{
+                                    stand3L02: 2 * n === 2,
+                                    stand3L04: 2 * n === 4,
+                                    stand3L06: 2 * n === 6,
+                                    stand3L08: 2 * n === 8,
+                                }"
+                            >
+                                L0{{ 2 * n }}
+                            </td>
+                            <td v-if="n === 5">L{{ 2 * n }}</td>
                         </tr>
                     </span>
                 </div>
@@ -138,7 +178,8 @@
                             <td>L0{{ 2 * n - 1 }}</td>
                         </tr>
                         <tr class="stand-2lBottom">
-                            <td>L0{{ 2 * n }}</td>
+                            <td v-if="n != 5">L0{{ 2 * n }}</td>
+                            <td v-if="n === 5">L{{ 2 * n }}</td>
                         </tr>
                     </span>
                 </div>
@@ -263,7 +304,7 @@ export default {
     name: "PiaComponent",
     data() {
         return {
-            floor: 0,
+            floor: "",
             rowNumber: "",
             seatNumber: "",
         };
@@ -281,17 +322,10 @@ export default {
                 return;
             }
 
-            // if (this.floor === 2) {
-            //     if(1 <= this.seatNumber <= 14){
-
-            //     }elseif(15 <= this.seatNumber <= 23){
-
-            //     }
-            // }elseif(this.floor === 3){
-
-            // }elseif(this.floor === 4){
-
-            // }
+            if (this.floor === 4) {
+                if (1 <= this.seatNumber <= 14) {
+                }
+            }
         },
     },
 };
