@@ -1,5 +1,40 @@
 <template>
     <div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">座席選択</label>
+            <select
+                input
+                type="id"
+                name="floor"
+                v-model="floor"
+                style="width: 110px"
+            >
+                <option disabled selected value>選択してください</option>
+                <option value="2">2階スタンド</option>
+                <option value="3">3階スタンド</option>
+                <option value="4">4階スタンド</option>
+            </select>
+            <input
+                type="text"
+                class="search_row"
+                v-model="rowNumber"
+                placeholder=""
+                style="width: 60px"
+            />列
+            <input
+                type="text"
+                class="search_seat"
+                v-model="seatNumber"
+                placeholder=""
+                style="width: 60px"
+            />番
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-info" @click="seatSearch">
+                    <i class="fa fa-search"></i>
+                </button>
+            </span>
+        </div>
+
         <div class="venue">
             <!-- <table class="arena">
                 <div>
@@ -226,5 +261,38 @@
 <script>
 export default {
     name: "PiaComponent",
+    data() {
+        return {
+            floor: 0,
+            rowNumber: "",
+            seatNumber: "",
+        };
+    },
+    methods: {
+        seatSearch() {
+            if (this.floor === "") {
+                alert("座席フロアを選択してください");
+                return;
+            } else if (this.rowNumber === "") {
+                alert("列が入力されていません");
+                return;
+            } else if (this.seatNumber === "") {
+                alert("席番号が入力されていません");
+                return;
+            }
+
+            // if (this.floor === 2) {
+            //     if(1 <= this.seatNumber <= 14){
+
+            //     }elseif(15 <= this.seatNumber <= 23){
+
+            //     }
+            // }elseif(this.floor === 3){
+
+            // }elseif(this.floor === 4){
+
+            // }
+        },
+    },
 };
 </script>
