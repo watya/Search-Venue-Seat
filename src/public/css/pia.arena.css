@@ -6,10 +6,10 @@ table {
     padding: 0.5em 1em;
     margin: 2em 0;
     border: double 5px #000000;
-    /* height: 120vh;
+    height: 120vh;
     width: 150vh;
     margin-right: auto;
-    margin-left: auto; */
+    margin-left: auto;
 }
 
 /* ステージ */

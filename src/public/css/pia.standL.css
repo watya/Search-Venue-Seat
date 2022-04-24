@@ -3,7 +3,7 @@
     display: flex;
     position: absolute;
     top: 270px; /* #contents内の上から何pxか */
-    left: 330px; /*#contents内の左から何pxか */
+    left: 300px; /*#contents内の左から何pxか */
 }
 
 .stand-2l td,
@@ -21,7 +21,7 @@
 .stand-2l {
     border-right: solid 5px rgb(251, 206, 139);
     border-left: solid 5px rgb(251, 206, 139);
-    padding: 10px;
+    padding: 15px;
 }
 .stand-2lTop {
     border-top: solid 2px rgb(251, 206, 139);

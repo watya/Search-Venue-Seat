@@ -197,6 +197,28 @@
                     <td>L14 L15</td>
                 </div>
             </table>
+
+            <!-- RC席 -->
+            <table class="RC">
+                <h>2階席R</h>
+                <div class="stand-2rc">
+                    <td>R24 R25</td>
+                    <td>R25 ~ R27</td>
+                    <td>R27 R28</td>
+                </div>
+                <h>3階席R</h>
+                <div class="stand-3rc">
+                    <td>R24 R25</td>
+                    <td>R26 R27</td>
+                    <td>R27 R28</td>
+                </div>
+                <h>4階席R</h>
+                <div class="stand-4rc">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </div>
+            </table>
         </div>
     </div>
 </template>
