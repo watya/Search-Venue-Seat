@@ -321,11 +321,6 @@ export default {
                 alert("席番号が入力されていません");
                 return;
             }
-
-            if (this.floor === 4) {
-                if (1 <= this.seatNumber <= 14) {
-                }
-            }
         },
     },
 };
