@@ -113,11 +113,11 @@
                         <tr class="stand-4lTop">
                             <td
                                 :class="{
-                                    stand4L01: 2 * n - 1 === 1,
-                                    stand4L03: 2 * n - 1 === 3,
-                                    stand4L05: 2 * n - 1 === 5,
-                                    stand4L07: 2 * n - 1 === 7,
-                                    stand4L09: 2 * n - 1 === 9,
+                                    stand4L11: 2 * n - 1 === 1, //４階席L01
+                                    stand4L32: 2 * n - 1 === 3, //４階席L03
+                                    stand4L50: 2 * n - 1 === 5, //４階席L05
+                                    stand4L68: 2 * n - 1 === 7, //４階席L07
+                                    stand4L90: 2 * n - 1 === 9, //４階席L09
                                 }"
                             >
                                 L0{{ 2 * n - 1 }}
@@ -127,15 +127,18 @@
                             <td
                                 v-if="n != 5"
                                 :class="{
-                                    stand4L02: 2 * n === 2,
-                                    stand4L04: 2 * n === 4,
-                                    stand4L06: 2 * n === 6,
-                                    stand4L08: 2 * n === 8,
+                                    stand4L23: 2 * n === 2, //４階席L02
+                                    stand4L41: 2 * n === 4, //４階席L04
+                                    stand4L59: 2 * n === 6, //４階席L06
+                                    stand4L77: 2 * n === 8, //４階席L08
                                 }"
                             >
                                 L0{{ 2 * n }}
                             </td>
-                            <td v-if="n === 5">L{{ 2 * n }}</td>
+                            <td class="stand4L90" v-if="n === 5">
+                                <!-- ４階席L10 -->
+                                L{{ 2 * n }}
+                            </td>
                         </tr>
                     </span>
                 </div>
@@ -143,30 +146,10 @@
                     <h>3階席L</h>
                     <span v-for="n in 5" :key="n">
                         <tr class="stand-3lTop">
-                            <td
-                                :class="{
-                                    stand3L01: 2 * n - 1 === 1,
-                                    stand3L03: 2 * n - 1 === 3,
-                                    stand3L05: 2 * n - 1 === 5,
-                                    stand3L07: 2 * n - 1 === 7,
-                                    stand3L09: 2 * n - 1 === 9,
-                                }"
-                            >
-                                L0{{ 2 * n - 1 }}
-                            </td>
+                            <td>L0{{ 2 * n - 1 }}</td>
                         </tr>
                         <tr class="stand-3lBottom">
-                            <td
-                                v-if="n != 5"
-                                :class="{
-                                    stand3L02: 2 * n === 2,
-                                    stand3L04: 2 * n === 4,
-                                    stand3L06: 2 * n === 6,
-                                    stand3L08: 2 * n === 8,
-                                }"
-                            >
-                                L0{{ 2 * n }}
-                            </td>
+                            <td v-if="n != 5">L0{{ 2 * n }}</td>
                             <td v-if="n === 5">L{{ 2 * n }}</td>
                         </tr>
                     </span>
@@ -320,6 +303,34 @@ export default {
             } else if (this.seatNumber === "") {
                 alert("席番号が入力されていません");
                 return;
+            }
+
+            function getClosestNum(searchNumber, seats) {
+                return seats.reduce((a, b) => {
+                    let aDiff = Math.abs(a - searchNumber);
+                    let bDiff = Math.abs(b - searchNumber);
+
+                    if (aDiff == bDiff) {
+                        return a > b ? a : b;
+                    } else {
+                        return bDiff < aDiff ? b : a;
+                    }
+                });
+            }
+
+            const searchNumber = this.seatNumber;
+            const seats = [11, 23, 32, 41, 50, 59, 68, 77, 90];
+
+            const closest = getClosestNum(searchNumber, seats);
+
+            if (closest < searchNumber) {
+                const index = seats.indexOf(closest);
+                seats.splice(index, 1);
+
+                const newClosest = getClosestNum(searchNumber, seats);
+                console.log(newClosest);
+            } else {
+                console.log(closest);
             }
         },
     },
