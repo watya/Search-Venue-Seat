@@ -27,8 +27,19 @@
                 style="width: 60px"
             />番
             <span class="input-group-btn">
-                <button type="submit" class="btn btn-info" @click="seatSearch">
+                <button
+                    type="submit"
+                    class="btn btn-info"
+                    @click="seatSearch"
+                    v-show="searchButton"
+                >
                     <i class="fa fa-search"></i>
+                </button>
+                <!-- <a href="/venue/pia" class="btn btn-info" v-show="toTop">
+                    別の座席を検索する
+                </a> -->
+                <button class="btn btn-info" v-show="toTop" @click="reSearch">
+                    別の座席を検索する
                 </button>
             </span>
         </div>
@@ -113,11 +124,11 @@
                         <tr class="stand-4lTop">
                             <td
                                 :class="{
-                                    stand4L11: 2 * n - 1 === 1, //４階席L01
-                                    stand4L32: 2 * n - 1 === 3, //４階席L03
-                                    stand4L50: 2 * n - 1 === 5, //４階席L05
-                                    stand4L68: 2 * n - 1 === 7, //４階席L07
-                                    stand4L90: 2 * n - 1 === 9, //４階席L09
+                                    stand411: 2 * n - 1 === 1, //４階席L01
+                                    stand432: 2 * n - 1 === 3, //４階席L03
+                                    stand450: 2 * n - 1 === 5, //４階席L05
+                                    stand468: 2 * n - 1 === 7, //４階席L07
+                                    stand490: 2 * n - 1 === 9, //４階席L09
                                 }"
                             >
                                 L0{{ 2 * n - 1 }}
@@ -127,15 +138,15 @@
                             <td
                                 v-if="n != 5"
                                 :class="{
-                                    stand4L23: 2 * n === 2, //４階席L02
-                                    stand4L41: 2 * n === 4, //４階席L04
-                                    stand4L59: 2 * n === 6, //４階席L06
-                                    stand4L77: 2 * n === 8, //４階席L08
+                                    stand423: 2 * n === 2, //４階席L02
+                                    stand441: 2 * n === 4, //４階席L04
+                                    stand459: 2 * n === 6, //４階席L06
+                                    stand477: 2 * n === 8, //４階席L08
                                 }"
                             >
                                 L0{{ 2 * n }}
                             </td>
-                            <td class="stand4L90" v-if="n === 5">
+                            <td class="stand490" v-if="n === 5">
                                 <!-- ４階席L10 -->
                                 L{{ 2 * n }}
                             </td>
@@ -146,11 +157,37 @@
                     <h>3階席L</h>
                     <span v-for="n in 5" :key="n">
                         <tr class="stand-3lTop">
-                            <td>L0{{ 2 * n - 1 }}</td>
+                            <td
+                                :class="{
+                                    stand39: 2 * n - 1 === 1, //3階席L01
+                                    stand327: 2 * n - 1 === 3, //3階席L03
+                                    stand345: 2 * n - 1 === 5, //3階席L05
+                                    stand363: 2 * n - 1 === 7, //3階席L07
+                                    stand383: 2 * n - 1 === 9, //3階席L09
+                                }"
+                            >
+                                L0{{ 2 * n - 1 }}
+                            </td>
                         </tr>
                         <tr class="stand-3lBottom">
-                            <td v-if="n != 5">L0{{ 2 * n }}</td>
-                            <td v-if="n === 5">L{{ 2 * n }}</td>
+                            <!-- <td v-if="n != 5">L0{{ 2 * n }}</td>
+                            <td v-if="n === 5">L{{ 2 * n }}</td> -->
+
+                            <td
+                                v-if="n != 5"
+                                :class="{
+                                    stand318: 2 * n === 2, //3階席L02
+                                    stand336: 2 * n === 4, //3階席L04
+                                    stand354: 2 * n === 6, //3階席L06
+                                    stand372: 2 * n === 8, //3階席L08
+                                }"
+                            >
+                                L0{{ 2 * n }}
+                            </td>
+                            <td class="stand383" v-if="n === 5">
+                                <!-- 3階席L10 -->
+                                L{{ 2 * n }}
+                            </td>
                         </tr>
                     </span>
                 </div>
@@ -287,9 +324,12 @@ export default {
     name: "PiaComponent",
     data() {
         return {
-            floor: "",
-            rowNumber: "",
-            seatNumber: "",
+            floor: "", //階
+            rowNumber: "", //列
+            seatNumber: "", //席番号
+            beforeNumber: "", //元のclass名
+            searchButton: true,
+            toTop: false,
         };
     },
     methods: {
@@ -309,7 +349,6 @@ export default {
                 return seats.reduce((a, b) => {
                     let aDiff = Math.abs(a - searchNumber);
                     let bDiff = Math.abs(b - searchNumber);
-
                     if (aDiff == bDiff) {
                         return a > b ? a : b;
                     } else {
@@ -318,9 +357,17 @@ export default {
                 });
             }
 
-            const searchNumber = this.seatNumber;
-            const seats = [11, 23, 32, 41, 50, 59, 68, 77, 90];
+            if (this.floor === "2") {
+                var seats = [11, 23, 32, 41, 50, 59, 68, 77, 90];
+            } else if (this.floor === "3") {
+                var seats = [9, 18, 27, 36, 45, 54, 63, 72, 83];
+            } else if (this.floor === "4") {
+                var seats = [11, 23, 32, 41, 50, 59, 68, 77, 90];
+            } else {
+                return;
+            }
 
+            const searchNumber = this.seatNumber;
             const closest = getClosestNum(searchNumber, seats);
 
             if (closest < searchNumber) {
@@ -328,10 +375,40 @@ export default {
                 seats.splice(index, 1);
 
                 const newClosest = getClosestNum(searchNumber, seats);
-                console.log(newClosest);
+
+                console.log("stand" + this.floor + newClosest);
+
+                document
+                    .querySelector(".stand" + this.floor + newClosest)
+                    .classList.replace(
+                        "stand" + this.floor + newClosest,
+                        "mySeat"
+                    );
+
+                this.beforeNumber = "stand" + this.floor + newClosest;
             } else {
-                console.log(closest);
+                console.log("stand" + this.floor + closest);
+
+                document
+                    .querySelector(".stand" + this.floor + closest, +closest)
+                    .classList.replace(
+                        "stand" + this.floor + closest,
+                        "mySeat"
+                    );
+                this.beforeNumber = "stand" + this.floor + closest;
             }
+
+            this.searchButton = !this.searchButton;
+            this.toTop = !this.toTop;
+        },
+
+        reSearch() {
+            document
+                .querySelector(".mySeat")
+                .classList.replace("mySeat", this.beforeNumber);
+
+            this.searchButton = !this.searchButton;
+            this.toTop = !this.toTop;
         },
     },
 };

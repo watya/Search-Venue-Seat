@@ -40,7 +40,7 @@ table {
     margin-left: 94px;
 }
 
-
-.search{
-    background-color: rgb(223, 11, 11);
+.mySeat {
+    background-color: rgb(248, 50, 50);
+    font-size: larger;
 }
