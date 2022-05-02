@@ -12,6 +12,17 @@ table {
     margin-left: auto;
 }
 
+.mySeat {
+    background-color: rgb(248, 50, 50);
+    font-size: larger;
+}
+
+.search-box {
+    position: absolute;
+    bottom: 850px;
+    left: 750px;
+}
+
 /* ステージ */
 .stage {
     background: #9a8e8e;
@@ -38,9 +49,4 @@ table {
 }
 .cd-arena {
     margin-left: 94px;
-}
-
-.mySeat {
-    background-color: rgb(248, 50, 50);
-    font-size: larger;
 }

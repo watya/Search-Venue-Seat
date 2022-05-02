@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="form-group">
+        <div class="search-box">
             <label for="exampleFormControlSelect1">座席選択</label>
             <select
                 input
@@ -32,12 +32,10 @@
                     class="btn btn-info"
                     @click="seatSearch"
                     v-show="searchButton"
+                    style="width: 50px"
                 >
                     <i class="fa fa-search"></i>
                 </button>
-                <!-- <a href="/venue/pia" class="btn btn-info" v-show="toTop">
-                    別の座席を検索する
-                </a> -->
                 <button class="btn btn-info" v-show="toTop" @click="reSearch">
                     別の座席を検索する
                 </button>
