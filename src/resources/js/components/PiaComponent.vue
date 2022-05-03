@@ -1,13 +1,13 @@
 <template>
     <div>
         <div class="search-box">
-            <label for="exampleFormControlSelect1">座席選択</label>
+            <div>座席選択</div>
             <select
                 input
                 type="id"
                 name="floor"
                 v-model="floor"
-                style="width: 110px"
+                style="width: 180px"
             >
                 <option disabled selected value>選択してください</option>
                 <option value="2">2階スタンド</option>
@@ -18,13 +18,13 @@
                 type="text"
                 class="search_row"
                 v-model="rowNumber"
-                style="width: 60px"
+                style="width: 130px"
             />列
             <input
                 type="text"
                 class="search_seat"
                 v-model="seatNumber"
-                style="width: 60px"
+                style="width: 130px"
             />番
             <span class="input-group-btn">
                 <button
@@ -32,7 +32,7 @@
                     class="btn btn-info"
                     @click="seatSearch"
                     v-show="searchButton"
-                    style="width: 50px"
+                    style="width: 60px"
                 >
                     <i class="fa fa-search"></i>
                 </button>
@@ -40,6 +40,9 @@
                     別の座席を検索する
                 </button>
             </span>
+            <div>
+                ※スタンド席のみ検索可(アリーナの座席配置はライブによって変わります)
+            </div>
         </div>
 
         <div class="venue">

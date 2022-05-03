@@ -9,10 +9,10 @@
     <a href="{{ route('venue.pia') }}">ぴあアリーナMM</a>
     <img src="https://corporate.pia.jp/business/hall/img/img_02.jpg" width="330" height="250">
 </div>
-<div>
+{{-- <div>
     <a href="{{ route('venue.yokohama') }}">横浜アリーナ</a>
     <img src="https://nationalstadium-tours.com/wp-content/uploads/2020/06/IMG_0633-2000x1200.jpg" width="330"
         height="250">
-</div>
+</div> --}}
 
 @endsection
