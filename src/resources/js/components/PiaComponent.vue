@@ -14,32 +14,39 @@
                 <option value="3">3階スタンド</option>
                 <option value="4">4階スタンド</option>
             </select>
-            <input
-                type="text"
-                class="search_row"
-                v-model="rowNumber"
-                style="width: 130px"
-            />列
-            <input
-                type="text"
-                class="search_seat"
-                v-model="seatNumber"
-                style="width: 130px"
-            />番
-            <span class="input-group-btn">
-                <button
-                    type="submit"
-                    class="btn btn-info"
-                    @click="seatSearch"
-                    v-show="searchButton"
-                    style="width: 60px"
-                >
-                    <i class="fa fa-search"></i>
-                </button>
-                <button class="btn btn-info" v-show="toTop" @click="reSearch">
-                    別の座席を検索する
-                </button>
-            </span>
+            <div>
+                <input
+                    type="text"
+                    class="search_row"
+                    v-model="rowNumber"
+                    style="width: 130px"
+                />列
+                <input
+                    type="text"
+                    class="search_seat"
+                    v-model="seatNumber"
+                    style="width: 130px"
+                />番
+                <span class="input-group-btn">
+                    <button
+                        type="submit"
+                        class="btn btn-info"
+                        @click="seatSearch"
+                        v-show="searchButton"
+                        style="width: 60px"
+                    >
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <button
+                        class="btn btn-info"
+                        v-show="toTop"
+                        @click="reSearch"
+                    >
+                        別の座席を検索する
+                    </button>
+                </span>
+            </div>
+
             <div>
                 ※スタンド席のみ検索可(アリーナの座席配置はライブによって変わります)
             </div>
