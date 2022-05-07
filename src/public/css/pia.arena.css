@@ -7,8 +7,8 @@
         padding: 0.5em 1em;
         margin: 2em 0;
         border: double 5px #000000;
-        height: 120vh;
-        width: 150vh;
+        height: 150vh;
+        min-width: 110vh;
         margin-right: auto;
         margin-left: auto;
     }
@@ -66,8 +66,8 @@
         padding: 0.5em 1em;
         margin: 2em 0;
         border: double 5px #000000;
-        height: 80vh;
-        width: 45vh;
+        height: 140vh;
+        min-width: 230%;
         margin-right: auto;
         margin-left: auto;
     }
@@ -83,17 +83,17 @@
         color: #fff;
         padding: 25px;
         border-bottom: solid 20px;
-        width: 220px;
+        width: 250px;
         height: 9px;
         text-align: center;
     }
 
     /* アリーナ */
     .arena {
-        border-right: solid 4px rgb(173, 236, 252);
-        border-left: solid 4px rgb(173, 236, 252);
-        height: 35px;
-        width: 15px;
+        border-right: solid 2px rgb(173, 236, 252);
+        border-left: solid 2px rgb(173, 236, 252);
+        height: 58px;
+        width: 34px;
     }
     .arena-top {
         border-top: solid 8px rgb(173, 236, 252);

@@ -1,59 +1,111 @@
 @charset "utf-8";
-.R {
-    display: flex;
-    position: absolute;
-    top: 270px; /* #contents内の上から何pxか */
-    right: 300px; /*#contents内の左から何pxか */
-}
-.stand-2r td,
-.stand-3r td,
-.stand-4r td {
-    padding: 7px;
-}
-.stand-2r tr,
-.stand-3r tr,
-.stand-4r tr {
-    display: block;
+
+@media (min-width: 1000px) {
+    .R {
+        display: flex;
+        position: absolute;
+        top: 270px;
+        right: 80px;
+    }
+    .stand-2r td,
+    .stand-3r td,
+    .stand-4r td {
+        padding: 7px;
+    }
+    .stand-2r tr,
+    .stand-3r tr,
+    .stand-4r tr {
+        display: block;
+    }
+
+    /* 2階スタンドR席 */
+    .stand-2r {
+        border-right: solid 5px rgb(251, 206, 139);
+        border-left: solid 5px rgb(251, 206, 139);
+        padding: 15px;
+    }
+    .stand-2rTop {
+        border-top: solid 2px rgb(251, 206, 139);
+    }
+    .stand-2rBottom {
+        border-bottom: solid 2px rgb(251, 206, 139);
+    }
+
+    /* 3階スタンドR席 */
+    .stand-3r {
+        border-right: solid 5px rgb(154, 248, 143);
+        border-left: solid 5px rgb(154, 248, 143);
+        padding: 10px;
+    }
+    .stand-3rTop {
+        border-top: solid 2px rgb(154, 248, 143);
+    }
+    .stand-3rBottom {
+        border-bottom: solid 2px rgb(154, 248, 143);
+    }
+
+    /* 4階スタンドR席 */
+    .stand-4r {
+        border-right: solid 5px rgb(81, 175, 199);
+        border-left: solid 5px rgb(81, 175, 199);
+        padding: 10px;
+    }
+    .stand-4rTop {
+        border-top: solid 2px rgb(81, 175, 199);
+    }
+    .stand-4rBottom {
+        border-bottom: solid 2px rgb(81, 175, 199);
+    }
 }
 
-/* 2階スタンドR席 */
-.stand-2r {
-    border-right: solid 5px rgb(251, 206, 139);
-    border-left: solid 5px rgb(251, 206, 139);
-    padding: 15px;
-    /* transform: translate(385px,-1839px); */
-}
-.stand-2rTop {
-    border-top: solid 2px rgb(251, 206, 139);
-}
-.stand-2rBottom {
-    border-bottom: solid 2px rgb(251, 206, 139);
-}
+/* スマホ */
+@media (max-width: 999px) {
+    .R {
+        display: flex;
+        position: absolute;
+        top: 391px;
+        right: -430px;
+    }
 
-/* 3階スタンドR席 */
-.stand-3r {
-    border-right: solid 5px rgb(154, 248, 143);
-    border-left: solid 5px rgb(154, 248, 143);
-    padding: 10px;
-    /* transform: translate(460px,-2254px); */
-}
-.stand-3rTop {
-    border-top: solid 2px rgb(154, 248, 143);
-}
-.stand-3rBottom {
-    border-bottom: solid 2px rgb(154, 248, 143);
-}
+    .stand-2r tr,
+    .stand-3r tr,
+    .stand-4r tr {
+        display: block;
+    }
 
-/* 4階スタンドR席 */
-.stand-4r {
-    border-right: solid 5px rgb(81, 175, 199);
-    border-left: solid 5px rgb(81, 175, 199);
-    padding: 10px;
-    /* transform: translate(535px,-2668px); */
-}
-.stand-4rTop {
-    border-top: solid 2px rgb(81, 175, 199);
-}
-.stand-4rBottom {
-    border-bottom: solid 2px rgb(81, 175, 199);
+    /* 2階スタンドR席 */
+    .stand-2r {
+        border-right: solid 4px rgb(251, 206, 139);
+        border-left: solid 4px rgb(251, 206, 139);
+    }
+    .stand-2rTop {
+        border-top: solid 1px rgb(251, 206, 139);
+    }
+    .stand-2rBottom {
+        border-bottom: solid 1px rgb(251, 206, 139);
+    }
+
+    /* 3階スタンドR席 */
+    .stand-3r {
+        border-right: solid 4px rgb(154, 248, 143);
+        border-left: solid 4px rgb(154, 248, 143);
+    }
+    .stand-3rTop {
+        border-top: solid 1px rgb(154, 248, 143);
+    }
+    .stand-3rBottom {
+        border-bottom: solid 1px rgb(154, 248, 143);
+    }
+
+    /* 4階スタンドR席 */
+    .stand-4r {
+        border-right: solid 4px rgb(81, 175, 199);
+        border-left: solid 4px rgb(81, 175, 199);
+    }
+    .stand-4rTop {
+        border-top: solid 1px rgb(81, 175, 199);
+    }
+    .stand-4rBottom {
+        border-bottom: solid 1px rgb(81, 175, 199);
+    }
 }

@@ -1,43 +1,70 @@
 @charset "utf-8";
 
-/* RC席 */
+@media (min-width: 1000px) {
+    /* RC席 */
 
-.RC {
-    transform: rotate(-53deg);
-    position: absolute;
-    top: 770px; /* #contents内の上から何pxか */
-    left: 1220px; /*#contents内の右から何pxか */
+    .RC {
+        transform: rotate(-53deg);
+        position: absolute;
+        top: 810px;
+        left: 1040px;
+    }
+
+    .stand-2rc td,
+    .stand-3rc td,
+    .stand-4rc td {
+        padding: 8px;
+    }
+
+    /* 2階スタンドRC席 */
+    .stand-2rc {
+        border-top: solid 5px rgb(251, 206, 139);
+        border-bottom: solid 5px rgb(251, 206, 139);
+        padding: 9px;
+    }
+
+    /* 3階スタンドRC席 */
+    .stand-3rc {
+        border-top: solid 5px rgb(154, 248, 143);
+        border-bottom: solid 5px rgb(154, 248, 143);
+        padding: 3px;
+    }
+
+    /* 4階スタンドRC席 */
+    .stand-4rc {
+        border-top: solid 5px rgb(81, 175, 199);
+        border-bottom: solid 5px rgb(81, 175, 199);
+        padding: 2px;
+    }
 }
 
-.stand-2rc td,
-.stand-3rc td,
-.stand-4rc td {
-    padding: 8px;
-}
+/* スマホ */
+@media (max-width: 999px) {
+    .RC {
+        transform: rotate(-57deg);
+        position: absolute;
+        top: 730px;
+        right: -460px;
+    }
 
-/* 2階スタンドRC席 */
-.stand-2rc {
-    /* border-right: solid 5px rgb(251, 206, 139);
-    border-left: solid 5px rgb(251, 206, 139); */
-    border-top: solid 5px rgb(251, 206, 139);
-    border-bottom: solid 5px rgb(251, 206, 139);
-    padding: 9px;
-}
+    /* 2階スタンドRC席 */
+    .stand-2rc {
+        border-top: solid 5px rgb(251, 206, 139);
+        border-bottom: solid 5px rgb(251, 206, 139);
+        padding: 9px;
+    }
 
-/* 3階スタンドRC席 */
-.stand-3rc {
-    /* border-right: solid 5px rgb(154, 248, 143);
-    border-left: solid 5px rgb(154, 248, 143); */
-    border-top: solid 5px rgb(154, 248, 143);
-    border-bottom: solid 5px rgb(154, 248, 143);
-    padding: 3px;
-}
+    /* 3階スタンドRC席 */
+    .stand-3rc {
+        border-top: solid 5px rgb(154, 248, 143);
+        border-bottom: solid 5px rgb(154, 248, 143);
+        padding: 3px;
+    }
 
-/* 4階スタンドRC席 */
-.stand-4rc {
-    /* border-right: solid 5px rgb(81, 175, 199);
-    border-left: solid 5px rgb(81, 175, 199); */
-    border-top: solid 5px rgb(81, 175, 199);
-    border-bottom: solid 5px rgb(81, 175, 199);
-    padding: 2px;
+    /* 4階スタンドRC席 */
+    .stand-4rc {
+        border-top: solid 5px rgb(81, 175, 199);
+        border-bottom: solid 5px rgb(81, 175, 199);
+        padding: 2px;
+    }
 }
