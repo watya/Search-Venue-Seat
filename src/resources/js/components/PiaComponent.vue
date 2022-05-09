@@ -42,13 +42,15 @@
                         v-show="toTop"
                         @click="reSearch"
                     >
-                        別の座席を検索する
+                        別の座席を検索
                     </button>
                 </span>
             </div>
 
             <div>
-                ※スタンド席のみ検索可(アリーナの座席配置はライブによって変わります)
+                ※スタンド席のみ検索可
+                <br />
+                (アリーナの座席配置はライブによって変わります)
             </div>
         </div>
 
@@ -453,13 +455,28 @@ export default {
             } else if (this.seatNumber === "") {
                 alert("席番号が入力されていません");
                 return;
-            } else if (this.floor === "2" && this.seatNumber > 330) {
-                alert("正しい席番号を入力してください");
+            } else if (
+                this.floor === "2" &&
+                (this.seatNumber > 330 || this.rowNumber > 9)
+            ) {
+                alert("正しい番号を入力してください");
                 return;
-            } else if (this.floor === "3" && this.seatNumber > 318) {
-                alert("正しい席番号を入力してください");
+            } else if (
+                this.floor === "3" &&
+                (this.seatNumber > 318 || this.rowNumber > 6)
+            ) {
+                alert("正しい番号を入力してください");
                 return;
-            } else if (this.floor === "4" && this.seatNumber > 325) {
+            } else if (
+                this.floor === "4" &&
+                (this.seatNumber > 325 || this.rowNumber > 5)
+            ) {
+                alert("正しい番号を入力してください");
+                return;
+            } else if (isNaN(this.rowNumber)) {
+                alert("正しい列を入力してください");
+                return;
+            } else if (isNaN(this.seatNumber)) {
                 alert("正しい席番号を入力してください");
                 return;
             }

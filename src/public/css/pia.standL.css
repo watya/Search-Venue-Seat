@@ -1,18 +1,20 @@
 @charset "utf-8";
 
+/* PC */
 @media (min-width: 1000px) {
     .L {
         display: flex;
         position: absolute;
-        top: 270px;
-        left: 90px;
+        top: 300px;
+        left: 250px;
     }
 
     .stand-2l td,
     .stand-3l td,
     .stand-4l td {
-        padding: 7px;
+        padding: 8px;
     }
+
     .stand-2l tr,
     .stand-3l tr,
     .stand-4l tr {
@@ -21,50 +23,105 @@
 
     /* 2階スタンドL席 */
     .stand-2l {
-        border-right: solid 5px rgb(251, 206, 139);
-        border-left: solid 5px rgb(251, 206, 139);
-        padding: 15px;
+        border-right: solid 4px rgb(251, 206, 139);
+        border-left: solid 4px rgb(251, 206, 139);
     }
     .stand-2lTop {
-        border-top: solid 2px rgb(251, 206, 139);
+        border-top: solid 1px rgb(251, 206, 139);
     }
     .stand-2lBottom {
-        border-bottom: solid 2px rgb(251, 206, 139);
+        border-bottom: solid 1px rgb(251, 206, 139);
     }
 
     /* 3階スタンドL席 */
     .stand-3l {
-        border-right: solid 5px rgb(154, 248, 143);
-        border-left: solid 5px rgb(154, 248, 143);
-        padding: 10px;
+        border-right: solid 4px rgb(154, 248, 143);
+        border-left: solid 4px rgb(154, 248, 143);
     }
     .stand-3lTop {
-        border-top: solid 2px rgb(154, 248, 143);
+        border-top: solid 1px rgb(154, 248, 143);
     }
     .stand-3lBottom {
-        border-bottom: solid 2px rgb(154, 248, 143);
+        border-bottom: solid 1px rgb(154, 248, 143);
     }
 
     /* 4階スタンドL席 */
     .stand-4l {
-        border-right: solid 5px rgb(81, 175, 199);
-        border-left: solid 5px rgb(81, 175, 199);
-        padding: 10px;
+        border-right: solid 4px rgb(81, 175, 199);
+        border-left: solid 4px rgb(81, 175, 199);
     }
     .stand-4lTop {
-        border-top: solid 2px rgb(81, 175, 199);
+        border-top: solid 1px rgb(81, 175, 199);
     }
     .stand-4lBottom {
-        border-bottom: solid 2px rgb(81, 175, 199);
+        border-bottom: solid 1px rgb(81, 175, 199);
     }
 }
 
-/* スマホ */
+/* タブレット */
 @media (max-width: 999px) {
     .L {
         display: flex;
         position: absolute;
-        top: 390px; /* #contents内の上から何pxか */
+        top: 320px; /* #contents内の上から何pxか */
+        left: 50px; /*#contents内の左から何pxか */
+    }
+
+    .stand-2l td,
+    .stand-3l td,
+    .stand-4l td {
+        padding: 4px;
+    }
+
+    .stand-2l tr,
+    .stand-3l tr,
+    .stand-4l tr {
+        display: block;
+    }
+
+    /* 2階スタンドL席 */
+    .stand-2l {
+        border-right: solid 4px rgb(251, 206, 139);
+        border-left: solid 4px rgb(251, 206, 139);
+    }
+    .stand-2lTop {
+        border-top: solid 1px rgb(251, 206, 139);
+    }
+    .stand-2lBottom {
+        border-bottom: solid 1px rgb(251, 206, 139);
+    }
+
+    /* 3階スタンドL席 */
+    .stand-3l {
+        border-right: solid 4px rgb(154, 248, 143);
+        border-left: solid 4px rgb(154, 248, 143);
+    }
+    .stand-3lTop {
+        border-top: solid 1px rgb(154, 248, 143);
+    }
+    .stand-3lBottom {
+        border-bottom: solid 1px rgb(154, 248, 143);
+    }
+
+    /* 4階スタンドL席 */
+    .stand-4l {
+        border-right: solid 4px rgb(81, 175, 199);
+        border-left: solid 4px rgb(81, 175, 199);
+    }
+    .stand-4lTop {
+        border-top: solid 1px rgb(81, 175, 199);
+    }
+    .stand-4lBottom {
+        border-bottom: solid 1px rgb(81, 175, 199);
+    }
+}
+
+/* スマホ */
+@media (max-width: 540px) {
+    .L {
+        display: flex;
+        position: absolute;
+        top: 430px; /* #contents内の上から何pxか */
         left: 75px; /*#contents内の左から何pxか */
     }
 

@@ -1,14 +1,17 @@
 @charset "utf-8";
+
+/* PC */
+
 @media (min-width: 1000px) {
     table {
-        margin: 20px auto;
+        margin: 60px auto;
     }
     .venue {
         padding: 0.5em 1em;
-        margin: 2em 0;
+        margin: 5em 0;
         border: double 5px #000000;
         height: 150vh;
-        min-width: 110vh;
+        max-width: 90%;
         margin-right: auto;
         margin-left: auto;
     }
@@ -20,11 +23,11 @@
 
     .search-box {
         position: absolute;
-        bottom: 850px;
-        left: 680px;
+        top: 80px;
+        left: 540px;
     }
     .piaTitle {
-        margin-left: 30px;
+        margin-left: 40px;
         font-size: larger;
     }
 
@@ -34,17 +37,17 @@
         color: #fff;
         padding: 25px;
         border-bottom: solid 20px;
-        width: 639px;
-        height: 90px;
+        width: 450px;
+        height: 9px;
         text-align: center;
     }
 
     /* アリーナ */
     .arena {
-        border-right: solid 10px rgb(173, 236, 252);
-        border-left: solid 10px rgb(173, 236, 252);
-        padding: 25px;
+        border-right: solid 2px rgb(173, 236, 252);
+        border-left: solid 2px rgb(173, 236, 252);
         height: 90px;
+        width: 62px;
     }
     .arena-top {
         border-top: solid 8px rgb(173, 236, 252);
@@ -53,23 +56,88 @@
         border-bottom: solid 13px rgb(173, 236, 252);
     }
     .cd-arena {
-        margin-left: 94px;
+        margin-left: 64px;
+    }
+}
+
+/* タブレット */
+@media (max-width: 900px) {
+    table {
+        margin: 60px auto;
+    }
+    .venue {
+        padding: 0.5em 1em;
+        margin: 5em 0;
+        border: double 5px #000000;
+        height: 110vh;
+        min-width: 110%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .mySeat {
+        background-color: rgb(248, 50, 50);
+        font-size: larger;
+    }
+
+    .search-box {
+        position: absolute;
+        top: 70px;
+        left: 340px;
+    }
+    .piaTitle {
+        margin-left: 15px;
+        font-size: larger;
+    }
+
+    /* ステージ */
+    .stage {
+        background: #9a8e8e;
+        color: #fff;
+        padding: 25px;
+        border-bottom: solid 20px;
+        width: 300px;
+        height: 9px;
+        text-align: center;
+    }
+
+    /* アリーナ */
+    .arena {
+        border-right: solid 2px rgb(173, 236, 252);
+        border-left: solid 2px rgb(173, 236, 252);
+        height: 80px;
+        width: 41px;
+    }
+    .arena-top {
+        border-top: solid 8px rgb(173, 236, 252);
+    }
+    .arena-bottom {
+        border-bottom: solid 13px rgb(173, 236, 252);
+    }
+    .cd-arena {
+        margin-left: 43px;
     }
 }
 
 /* スマホ */
-@media (max-width: 999px) {
+@media (max-width: 540px) {
     table {
-        margin: 20px auto;
+        margin: 50px auto;
     }
     .venue {
         padding: 0.5em 1em;
-        margin: 2em 0;
+        margin: 14em 0;
         border: double 5px #000000;
-        height: 140vh;
+        height: 160vh;
         min-width: 230%;
         margin-right: auto;
         margin-left: auto;
+    }
+
+    .search-box {
+        position: absolute;
+        top: 170px;
+        left: 10px;
     }
 
     .mySeat {
@@ -92,7 +160,7 @@
     .arena {
         border-right: solid 2px rgb(173, 236, 252);
         border-left: solid 2px rgb(173, 236, 252);
-        height: 58px;
+        height: 70px;
         width: 34px;
     }
     .arena-top {

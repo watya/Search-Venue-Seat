@@ -1,14 +1,39 @@
 @charset "utf-8";
 
+/* PC */
 @media (min-width: 1000px) {
     .C {
         position: relative;
-        top: 60px;
+        top: 40px;
     }
-    .stand-2c td,
-    .stand-3c td,
-    .stand-4c td {
-        padding: 20px;
+
+    /* 2階スタンドC席 */
+    .stand-2c {
+        border-top: solid 5px rgb(251, 206, 139);
+        border-bottom: solid 5px rgb(251, 206, 139);
+        padding: 15px;
+    }
+
+    /* 3階スタンドC席 */
+    .stand-3c {
+        border-top: solid 5px rgb(154, 248, 143);
+        border-bottom: solid 5px rgb(154, 248, 143);
+        padding: 5px;
+    }
+
+    /* 4階スタンドC席 */
+    .stand-4c {
+        border-top: solid 5px rgb(81, 175, 199);
+        border-bottom: solid 5px rgb(81, 175, 199);
+        padding: 5px;
+    }
+}
+
+/* タブレット */
+@media (max-width: 999px) {
+    .C {
+        position: relative;
+        top: 60px;
     }
 
     /* 2階スタンドC席 */
@@ -34,12 +59,11 @@
 }
 
 /* スマホ */
-@media (max-width: 999px) {
+@media (max-width: 540px) {
     .C {
         position: relative;
         top: 40px;
     }
-
 
     /* 2階スタンドC席 */
     .stand-2c {
