@@ -37,15 +37,15 @@
         color: #fff;
         padding: 25px;
         border-bottom: solid 20px;
-        width: 450px;
+        width: 480px;
         height: 9px;
         text-align: center;
     }
 
     /* アリーナ */
     .arena {
-        border-right: solid 2px rgb(173, 236, 252);
-        border-left: solid 2px rgb(173, 236, 252);
+        border-right: solid 7px rgb(173, 236, 252);
+        border-left: solid 7px rgb(173, 236, 252);
         height: 90px;
         width: 62px;
     }
@@ -96,15 +96,15 @@
         color: #fff;
         padding: 25px;
         border-bottom: solid 20px;
-        width: 300px;
+        width: 320px;
         height: 9px;
         text-align: center;
     }
 
     /* アリーナ */
     .arena {
-        border-right: solid 2px rgb(173, 236, 252);
-        border-left: solid 2px rgb(173, 236, 252);
+        border-right: solid 5px rgb(173, 236, 252);
+        border-left: solid 5px rgb(173, 236, 252);
         height: 80px;
         width: 41px;
     }
@@ -151,15 +151,15 @@
         color: #fff;
         padding: 25px;
         border-bottom: solid 20px;
-        width: 250px;
+        width: 265px;
         height: 9px;
         text-align: center;
     }
 
     /* アリーナ */
     .arena {
-        border-right: solid 2px rgb(173, 236, 252);
-        border-left: solid 2px rgb(173, 236, 252);
+        border-right: solid 4px rgb(173, 236, 252);
+        border-left: solid 4px rgb(173, 236, 252);
         height: 70px;
         width: 34px;
     }

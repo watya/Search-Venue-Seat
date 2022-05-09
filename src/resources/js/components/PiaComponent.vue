@@ -441,47 +441,7 @@ export default {
             beforeNumber: "", //元のclass名
             searchButton: true,
             toTop: false,
-        };
-    },
-
-    methods: {
-        seatSearch() {
-            if (this.floor === "") {
-                alert("座席フロアを選択してください");
-                return;
-            } else if (this.rowNumber === "") {
-                alert("列が入力されていません");
-                return;
-            } else if (this.seatNumber === "") {
-                alert("席番号が入力されていません");
-                return;
-            } else if (
-                this.floor === "2" &&
-                (this.seatNumber > 330 || this.rowNumber > 9)
-            ) {
-                alert("正しい番号を入力してください");
-                return;
-            } else if (
-                this.floor === "3" &&
-                (this.seatNumber > 318 || this.rowNumber > 6)
-            ) {
-                alert("正しい番号を入力してください");
-                return;
-            } else if (
-                this.floor === "4" &&
-                (this.seatNumber > 325 || this.rowNumber > 5)
-            ) {
-                alert("正しい番号を入力してください");
-                return;
-            } else if (isNaN(this.rowNumber)) {
-                alert("正しい列を入力してください");
-                return;
-            } else if (isNaN(this.seatNumber)) {
-                alert("正しい席番号を入力してください");
-                return;
-            }
-
-            function getClosestNum(searchNumber, seats) {
+            getClosestNum: function (searchNumber, seats) {
                 const num = seats.reduce((a, b) => {
                     let aDiff = Math.abs(a - searchNumber);
                     let bDiff = Math.abs(b - searchNumber);
@@ -522,6 +482,45 @@ export default {
                 } else {
                     return num;
                 }
+            },
+        };
+    },
+
+    methods: {
+        seatSearch() {
+            if (this.floor === "") {
+                alert("座席フロアを選択してください");
+                return;
+            } else if (this.rowNumber === "") {
+                alert("列番号が入力されていません");
+                return;
+            } else if (this.seatNumber === "") {
+                alert("席番号が入力されていません");
+                return;
+            } else if (
+                this.floor === "2" &&
+                (this.seatNumber > 330 || this.rowNumber > 9)
+            ) {
+                alert("正しい番号を入力してください");
+                return;
+            } else if (
+                this.floor === "3" &&
+                (this.seatNumber > 318 || this.rowNumber > 6)
+            ) {
+                alert("正しい番号を入力してください");
+                return;
+            } else if (
+                this.floor === "4" &&
+                (this.seatNumber > 325 || this.rowNumber > 5)
+            ) {
+                alert("正しい番号を入力してください");
+                return;
+            } else if (isNaN(this.rowNumber)) {
+                alert("正しい列番号を入力してください");
+                return;
+            } else if (isNaN(this.seatNumber)) {
+                alert("正しい席番号を入力してください");
+                return;
             }
 
             if (this.floor === "2") {
@@ -547,7 +546,7 @@ export default {
 
             const searchNumber = this.seatNumber;
             const seats = this.seats;
-            const closest = getClosestNum(searchNumber, seats);
+            const closest = this.getClosestNum(searchNumber, seats);
 
             console.log("stand" + this.floor + closest);
 
