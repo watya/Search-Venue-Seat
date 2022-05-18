@@ -119,8 +119,8 @@
 /* スマホ */
 @media (max-width: 540px) {
     .L {
-        display: flex;
         position: absolute;
+        display: flex;
         top: 430px; /* #contents内の上から何pxか */
         left: 75px; /*#contents内の左から何pxか */
     }

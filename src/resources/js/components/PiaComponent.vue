@@ -335,7 +335,7 @@
                 </div>
             </div>
             <!--  C席 -->
-            <table class="C">
+            <div class="C">
                 <tr>
                     2階席C
                 </tr>
@@ -378,7 +378,7 @@
                     <td class="stand4175">C17 C18</td>
                     <td class="stand4195">C18 C21</td>
                 </div>
-            </table>
+            </div>
 
             <!-- LC席 -->
             <table class="LC">
