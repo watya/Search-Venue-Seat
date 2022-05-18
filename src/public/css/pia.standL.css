@@ -63,7 +63,7 @@
     .L {
         display: flex;
         position: absolute;
-        top: 320px; /* #contents内の上から何pxか */
+        top: 370px; /* #contents内の上から何pxか */
         left: 50px; /*#contents内の左から何pxか */
     }
 
@@ -121,7 +121,7 @@
     .L {
         position: absolute;
         display: flex;
-        top: 430px; /* #contents内の上から何pxか */
+        top: 460px; /* #contents内の上から何pxか */
         left: 75px; /*#contents内の左から何pxか */
     }
 

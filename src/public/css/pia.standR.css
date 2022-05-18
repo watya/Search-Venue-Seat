@@ -63,7 +63,7 @@
     .R {
         display: flex;
         position: absolute;
-        top: 320px;
+        top: 370px;
         right: -30px;
     }
 
@@ -121,7 +121,7 @@
     .R {
         position: absolute;
         display: flex;
-        top: 430px;
+        top: 460px;
         right: -430px;
     }
 
