@@ -1,5 +1,10 @@
 <template>
-    <div>
+    <div class="all">
+        <div class="piaTitle">
+                <h1>ぴあアリーナMM</h1>
+                <p>神奈川県横浜市西区みなとみらい3-2-2</p>
+        </div>
+
         <div class="search-box">
             <div>座席選択</div>
             <select
@@ -55,44 +60,6 @@
         </div>
 
         <div class="venue">
-            <!-- <table class="arena">
-                <div>
-                    <div>
-                        <th>ステージ</th>
-                        <span v-for="n in 7" :key="n">
-                            <tr id="top">
-                                <td id="a">A{{ n }}</td>
-                            </tr>
-                            <tr id="bottom">
-                                <td id="a"></td>
-                            </tr>
-                            <tr>
-                                <td id="a">B{{ n }}</td>
-                            </tr>
-                            <tr id="bottom">
-                                <td id="a"></td>
-                            </tr>
-                            <tr>
-                                <td id="a">C{{ n }}</td>
-                            </tr>
-                            <tr id="bottom">
-                                <td id="a"></td>
-                            </tr>
-                        </span>
-                    </div>
-                    <div id="d-arena">
-                        <span v-for="k in 5" :key="k">
-                            <tr>
-                                <td id="a">D{{ 1 + k }}</td>
-                            </tr>
-                            <tr id="bottom">
-                                <td id="a"></td>
-                            </tr>
-                        </span>
-                    </div>
-                </div>
-            </table> -->
-
             <!-- アリーナ -->
             <table>
                 <div>

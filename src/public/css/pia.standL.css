@@ -25,6 +25,8 @@
     .stand-2l {
         border-right: solid 4px rgb(251, 206, 139);
         border-left: solid 4px rgb(251, 206, 139);
+
+        background-color: rgb(249, 247, 205);
     }
     .stand-2lTop {
         border-top: solid 1px rgb(251, 206, 139);
@@ -35,20 +37,24 @@
 
     /* 3階スタンドL席 */
     .stand-3l {
-        border-right: solid 4px rgb(154, 248, 143);
-        border-left: solid 4px rgb(154, 248, 143);
+        border-right: solid 4px rgb(135, 248, 122);
+        border-left: solid 4px rgb(135, 248, 122);
+
+        background-color: rgb(217, 248, 213);
     }
     .stand-3lTop {
-        border-top: solid 1px rgb(154, 248, 143);
+        border-top: solid 1px rgb(135, 248, 122);
     }
     .stand-3lBottom {
-        border-bottom: solid 1px rgb(154, 248, 143);
+        border-bottom: solid 1px rgb(135, 248, 122);
     }
 
     /* 4階スタンドL席 */
     .stand-4l {
         border-right: solid 4px rgb(81, 175, 199);
         border-left: solid 4px rgb(81, 175, 199);
+
+        background-color: rgb(208, 243, 253);
     }
     .stand-4lTop {
         border-top: solid 1px rgb(81, 175, 199);

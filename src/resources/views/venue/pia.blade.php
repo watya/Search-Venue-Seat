@@ -10,10 +10,6 @@
 
 
 @section('content')
-<div class="piaTitle">
-    <h1>ぴあアリーナMM</h1>
-    <p>神奈川県横浜市西区みなとみらい3-2-2</p>
-</div>
 
 <div>
     <pia-component></pia-component>
