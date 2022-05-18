@@ -3,8 +3,8 @@
 /* PC */
 @media (min-width: 1000px) {
     .L {
-        display: flex;
         position: absolute;
+        display: flex;
         top: 300px;
         left: 250px;
     }
