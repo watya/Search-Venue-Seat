@@ -127,7 +127,7 @@
             </table>
 
             <!-- L席 -->
-            <div class="L">
+            <table class="L">
                 <div class="stand-4l">
                     <h>4階席L</h>
                     <span v-for="n in 5" :key="n">
@@ -233,9 +233,9 @@
                         </tr>
                     </span>
                 </div>
-            </div>
+            </table>
             <!-- R席 -->
-            <div class="R">
+            <table class="R">
                 <div class="stand-2r">
                     <h>2階席R</h>
                     <span v-for="n in 5" :key="n">
@@ -333,9 +333,9 @@
                         </span>
                     </div>
                 </div>
-            </div>
+            </table>
             <!--  C席 -->
-            <div class="C">
+            <table class="C">
                 <tr>
                     2階席C
                 </tr>
@@ -378,7 +378,7 @@
                     <td class="stand4175">C17 C18</td>
                     <td class="stand4195">C18 C21</td>
                 </div>
-            </div>
+            </table>
 
             <!-- LC席 -->
             <table class="LC">
