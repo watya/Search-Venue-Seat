@@ -7,7 +7,7 @@
 <h1>会場一覧</h1>
 <div>
     <a href="{{ route('venue.pia') }}">ぴあアリーナMM</a>
-    <img src="https://corporate.pia.jp/business/hall/img/img_02.jpg" width="330" height="250">
+    <img src="https://pia-arena-mm.jp/wp-content/uploads/2020/07/arena.jpg" width="330" height="250">
 </div>
 {{-- <div>
     <a href="{{ route('venue.yokohama') }}">横浜アリーナ</a>
