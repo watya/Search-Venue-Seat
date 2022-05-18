@@ -11,7 +11,7 @@
 
 @section('content')
 <div class="piaTitle">
-    <h1>ぴあアリーナMM</h1>
+    <h1>ぴあアリーナ</h1>
     <p>神奈川県横浜市西区みなとみらい3-2-2</p>
 </div>
 
