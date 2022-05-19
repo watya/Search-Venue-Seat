@@ -1,8 +1,8 @@
 <template>
     <div class="all">
         <div class="piaTitle">
-                <h1>ぴあアリーナMM</h1>
-                <p>神奈川県横浜市西区みなとみらい3-2-2</p>
+            <h1><span>ぴあアリーナMM</span></h1>
+            <p><span>神奈川県横浜市西区みなとみらい3-2-2</span></p>
         </div>
 
         <div class="search-box">
