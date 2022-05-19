@@ -47,6 +47,8 @@
         border-top: solid 5px rgb(251, 206, 139);
         border-bottom: solid 5px rgb(251, 206, 139);
         padding: 10px;
+
+        background-color: rgb(249, 247, 205);
     }
 
     /* 3階スタンドC席 */
@@ -54,6 +56,8 @@
         border-top: solid 5px rgb(154, 248, 143);
         border-bottom: solid 5px rgb(154, 248, 143);
         padding: 3px;
+
+        background-color: rgb(217, 248, 213);
     }
 
     /* 4階スタンドC席 */
@@ -61,6 +65,8 @@
         border-top: solid 5px rgb(81, 175, 199);
         border-bottom: solid 5px rgb(81, 175, 199);
         padding: 3px;
+
+        background-color: rgb(208, 243, 253);
     }
 }
 
@@ -76,6 +82,8 @@
         border-top: solid 5px rgb(251, 206, 139);
         border-bottom: solid 5px rgb(251, 206, 139);
         padding: 10px;
+
+        background-color: rgb(249, 247, 205);
     }
 
     /* 3階スタンドC席 */
@@ -83,6 +91,8 @@
         border-top: solid 5px rgb(154, 248, 143);
         border-bottom: solid 5px rgb(154, 248, 143);
         padding: 3px;
+
+        background-color: rgb(217, 248, 213);
     }
 
     /* 4階スタンドC席 */
@@ -90,5 +100,7 @@
         border-top: solid 5px rgb(81, 175, 199);
         border-bottom: solid 5px rgb(81, 175, 199);
         padding: 3px;
+
+        background-color: rgb(208, 243, 253);
     }
 }

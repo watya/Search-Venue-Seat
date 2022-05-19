@@ -11,7 +11,7 @@
 
 @section('content')
 
-<div>
+<div class="component">
     <pia-component></pia-component>
 </div>
 

@@ -1,18 +1,8 @@
 @charset "utf-8";
 
-.piaTitle {
-    color: #fff;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-}
-
 h1 span,
 p span {
     background: #000000c0;
-}
-
-.py-4 {
-    background-image: url(https://yuzu-official.com/s3/skiyaki/uploads/ckeditor/pictures/423380/content_content_mother_other.jpg);
 }
 
 /* PC */
@@ -20,6 +10,9 @@ p span {
 @media (min-width: 1000px) {
     table {
         margin: 60px auto;
+    }
+    .py-4 {
+        background-image: url(https://yuzu-official.com/s3/skiyaki/uploads/ckeditor/pictures/423380/content_content_mother_other.jpg);
     }
     .venue {
         padding: 0.5em 1em;
@@ -50,6 +43,10 @@ p span {
     .piaTitle {
         margin-left: 40px;
         font-size: larger;
+
+        color: #fff;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
     }
 
     /* ステージ */
@@ -93,9 +90,16 @@ p span {
         margin: 5em 0;
         border: double 5px #000000;
         height: 110vh;
-        min-width: 110%;
+        min-width: 110px;
         margin-right: auto;
         margin-left: auto;
+
+        background-color: rgba(243, 239, 239, 0.867);
+    }
+
+    .py-4 {
+        background-image: url(https://yuzu-official.com/s3/skiyaki/uploads/ckeditor/pictures/423380/content_content_mother_other.jpg);
+        width: 110%;
     }
 
     .mySeat {
@@ -107,10 +111,17 @@ p span {
         position: absolute;
         top: 70px;
         left: 340px;
+
+        color: #fff;
+        background-color: #000000d8;
     }
     .piaTitle {
         margin-left: 15px;
         font-size: larger;
+
+        color: #fff;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
     }
 
     /* ステージ */
@@ -126,16 +137,18 @@ p span {
 
     /* アリーナ */
     .arena {
-        border-right: solid 5px rgb(173, 236, 252);
-        border-left: solid 5px rgb(173, 236, 252);
+        border-right: solid 5px rgb(144, 231, 251);
+        border-left: solid 5px rgb(144, 231, 251);
         height: 80px;
         width: 41px;
+
+        background-color: rgb(230, 250, 251);
     }
     .arena-top {
-        border-top: solid 8px rgb(173, 236, 252);
+        border-top: solid 8px rgb(144, 231, 251);
     }
     .arena-bottom {
-        border-bottom: solid 13px rgb(173, 236, 252);
+        border-bottom: solid 13px rgb(144, 231, 251);
     }
     .cd-arena {
         margin-left: 48px;
@@ -152,20 +165,36 @@ p span {
         margin: 14em 0;
         border: double 5px #000000;
         height: 160vh;
-        min-width: 230%;
+        min-width: 230px;
         margin-right: auto;
         margin-left: auto;
+
+        background-color: rgba(243, 239, 239, 0.867);
+    }
+
+    .py-4 {
+        background-image: url(https://yuzu-official.com/s3/skiyaki/uploads/ckeditor/pictures/423380/content_content_mother_other.jpg);
+        width: 230%;
     }
 
     .search-box {
         position: absolute;
         top: 170px;
         left: 10px;
+
+        color: #fff;
+        background-color: #000000ab;
     }
 
     .mySeat {
         background-color: rgb(248, 50, 50);
         font-size: larger;
+    }
+
+    .piaTitle {
+        color: #fff;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
     }
 
     /* ステージ */
@@ -181,16 +210,18 @@ p span {
 
     /* アリーナ */
     .arena {
-        border-right: solid 4px rgb(173, 236, 252);
-        border-left: solid 4px rgb(173, 236, 252);
+        border-right: solid 4px rgb(144, 231, 251);
+        border-left: solid 4px rgb(144, 231, 251);
         height: 70px;
         width: 34px;
+
+        background-color: rgb(230, 250, 251);
     }
     .arena-top {
-        border-top: solid 8px rgb(173, 236, 252);
+        border-top: solid 8px rgb(144, 231, 251);
     }
     .arena-bottom {
-        border-bottom: solid 13px rgb(173, 236, 252);
+        border-bottom: solid 13px rgb(144, 231, 251);
     }
     .cd-arena {
         margin-left: 40px;
