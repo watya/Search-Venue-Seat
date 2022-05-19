@@ -408,6 +408,7 @@ export default {
             beforeNumber: "", //元のclass名
             searchButton: true,
             toTop: false,
+
             getClosestNum: function (searchNumber, seats) {
                 const num = seats.reduce((a, b) => {
                     let aDiff = Math.abs(a - searchNumber);

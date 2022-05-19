@@ -5,6 +5,18 @@ p span {
     background: #000000c0;
 }
 
+@keyframes blinking {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* PC */
 
 @media (min-width: 1000px) {
@@ -36,8 +48,9 @@ p span {
     }
 
     .mySeat {
-        background-color: rgb(248, 50, 50);
+        background-color: rgb(249, 65, 65);
         font-size: larger;
+        animation: blinking 0.5s ease-in-out infinite alternate;
     }
 
     .piaTitle {
@@ -105,6 +118,7 @@ p span {
     .mySeat {
         background-color: rgb(248, 50, 50);
         font-size: larger;
+        animation: blinking 0.5s ease-in-out infinite alternate;
     }
 
     .search-box {
@@ -189,6 +203,7 @@ p span {
     .mySeat {
         background-color: rgb(248, 50, 50);
         font-size: larger;
+        animation: blinking 0.5s ease-in-out infinite alternate;
     }
 
     .piaTitle {
