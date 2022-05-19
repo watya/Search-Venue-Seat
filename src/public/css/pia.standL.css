@@ -5,7 +5,7 @@
     .L {
         position: absolute;
         display: flex;
-        top: 330px;
+        top: 350px;
         left: 250px;
     }
 
@@ -133,7 +133,7 @@
     .L {
         position: absolute;
         display: flex;
-        top: 460px; /* #contents内の上から何pxか */
+        top: 470px; /* #contents内の上から何pxか */
         left: 75px; /*#contents内の左から何pxか */
     }
 
