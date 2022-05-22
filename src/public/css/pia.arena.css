@@ -23,9 +23,9 @@ p span {
     table {
         margin: 60px auto;
     }
-    /* .py-4 {
+    .py-4 {
         background-image: url(https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2267102/b7730c78-8581-b75a-02f1-63bbb95592ec.jpeg);
-    } */
+    }
     .venue {
         padding: 0.5em 1em;
         margin: 5em 0;
