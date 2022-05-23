@@ -525,6 +525,16 @@ export default {
 
             this.searchButton = !this.searchButton;
             this.toTop = !this.toTop;
+
+            // const element = document.getElementsByClassName(
+            //     "stand" + this.floor + closest
+            // );
+            // element.scrollIntoView();
+
+            window.scrollTo({
+                top: 300,
+                behavior: "smooth",
+            });
         },
 
         reSearch() {
