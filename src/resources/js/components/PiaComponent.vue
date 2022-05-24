@@ -56,6 +56,10 @@
                 ※スタンド席のみ検索可
                 <br />
                 (アリーナの座席配置はライブによって変わります)
+                <br />
+                <a href="https://pdf.music-mdata.com/25915.pdf" target="_blank"
+                    >公式の座席表はこちら</a
+                >
             </div>
         </div>
 
@@ -526,11 +530,6 @@ export default {
             this.searchButton = !this.searchButton;
             this.toTop = !this.toTop;
 
-            // const element = document.getElementsByClassName(
-            //     "stand" + this.floor + closest
-            // );
-            // element.scrollIntoView();
-
             window.scrollTo({
                 top: 300,
                 behavior: "smooth",
@@ -544,6 +543,10 @@ export default {
 
             this.searchButton = !this.searchButton;
             this.toTop = !this.toTop;
+
+            this.floor = "";
+            this.rowNumber = "";
+            this.seatNumber = "";
         },
     },
 };
